@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>HappyDev - AI-Powered Development</title>
+    <script>
+      // Simple script to handle navigation in static site
+      document.addEventListener('click', function(e) {
+        // Handle clicks on navigation buttons
+        if (e.target.tagName === 'BUTTON' || e.target.parentElement.tagName === 'BUTTON') {
+          const button = e.target.tagName === 'BUTTON' ? e.target : e.target.parentElement;
+          const href = button.getAttribute('data-href');
+          if (href) {
+            window.location.href = href;
+            e.preventDefault();
+          }
+        }
+      });
+    </script>
+    <script type="module" crossorigin src="../assets/main.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/main.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
