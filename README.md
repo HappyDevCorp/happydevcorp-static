@@ -1,0 +1,1 @@
+# happydevcorp-static
